@@ -1,0 +1,22 @@
+run_name: resolution_sweep
+deployment_id: local_mock
+backend_type: mock_multimodal
+model_name: Qwen/Qwen3-VL-8B-Instruct
+base_url: http://localhost:8001/v1
+api_key: EMPTY
+dataset_file: data/demo/materials_vlm_demo.jsonl
+image_root: .
+input_mode: single_image
+image_resolution_list: ["original", "512", "768", "1024"]
+num_images_list: [1]
+concurrency_list: [1]
+max_output_tokens_list: [128]
+num_warmup_requests: 1
+num_measured_requests: 5
+stream: false
+timeout_seconds: 60
+temperature: 0
+save_model_responses: true
+cost_per_gpu_hour_usd: 1.50
+notes: Resolution sensitivity sweep.
+

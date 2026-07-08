@@ -1,0 +1,26 @@
+services:
+  qwen3-vl-vllm:
+    image: vllm/vllm-openai:latest
+    runtime: nvidia
+    environment:
+      MODEL_NAME: ${MODEL_NAME:-Qwen/Qwen3-VL-8B-Instruct}
+      PORT: ${PORT:-8001}
+      DTYPE: ${DTYPE:-auto}
+      MAX_MODEL_LEN: ${MAX_MODEL_LEN:-32768}
+      TENSOR_PARALLEL_SIZE: ${TENSOR_PARALLEL_SIZE:-1}
+      GPU_MEMORY_UTILIZATION: ${GPU_MEMORY_UTILIZATION:-0.90}
+      HF_HOME: ${HF_HOME:-/models/hf}
+    volumes:
+      - ${HF_HOME:-/models/hf}:/models/hf
+      - ./serve_qwen3_vl.sh:/serve_qwen3_vl.sh:ro
+    ports:
+      - "127.0.0.1:${PORT:-8001}:${PORT:-8001}"
+    command: ["/bin/bash", "/serve_qwen3_vl.sh"]
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+

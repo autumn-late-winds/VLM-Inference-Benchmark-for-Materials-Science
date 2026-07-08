@@ -1,0 +1,3 @@
+{"id":"sem_001","input_mode":"single_image","task_type":"sem_vqa","question":"What morphology is shown in this SEM image?"}
+{"id":"xrd_001","input_mode":"single_image","task_type":"xrd_interpretation","question":"What are the main peaks in this XRD pattern?"}
+

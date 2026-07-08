@@ -1,0 +1,20 @@
+{
+  "local_mock": {
+    "deployment_id": "local_mock",
+    "name": "Local Mock Multimodal Server",
+    "backend_type": "mock_multimodal",
+    "base_url": "http://localhost:8001/v1",
+    "api_key": "EMPTY",
+    "model_name": "Qwen/Qwen3-VL-8B-Instruct",
+    "notes": "Local smoke testing only; no model weights are downloaded."
+  },
+  "local_mock_8011": {
+    "deployment_id": "local_mock_8011",
+    "name": "Project Mock 8011",
+    "backend_type": "mock_multimodal",
+    "base_url": "http://127.0.0.1:8011/v1",
+    "api_key": "EMPTY",
+    "model_name": "Qwen/Qwen3-VL-8B-Instruct",
+    "notes": "Smoke test mock endpoint"
+  }
+}
