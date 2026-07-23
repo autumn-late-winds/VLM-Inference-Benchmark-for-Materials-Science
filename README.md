@@ -222,17 +222,6 @@ $env:PYTHONPATH="backend"
 pytest backend/tests
 ```
 
-## Future Improvements
-
-- Real materials figure dataset.
-- OCR-enhanced plot understanding.
-- Figure panel detection.
-- Larger multimodal benchmark set.
-- Comparison across Qwen3-VL, InternVL, LLaVA, and GPT-style APIs.
-- Prometheus and Grafana monitoring.
-- Kubernetes deployment.
-- Integration with a Materials Multimodal RAG Assistant.
-
 ## Phase Status
 
 - Phase 1: skeleton, backend API, frontend dashboard, mock server, Docker local mode, demo generator, README are implemented.
