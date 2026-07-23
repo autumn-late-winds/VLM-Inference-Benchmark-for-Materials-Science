@@ -4,6 +4,14 @@ An MVP dashboard for benchmarking OpenAI-compatible multimodal model serving on 
 
 The local default is deliberately safe: it does not download Qwen3-VL weights. Local development runs the React dashboard, FastAPI backend, benchmark client, and mock multimodal server only.
 
+## Web Preview
+
+![Materials VLM inference benchmark dashboard](docs/images/dashboard.png)
+
+## Visual Demo Flow
+
+![Select images, test a model endpoint, benchmark, and review results](docs/images/workflow.svg)
+
 ## Architecture
 
 ```text
@@ -235,4 +243,3 @@ pytest backend/tests
 - Phase 6: cloud vLLM deployment scripts are implemented.
 - Phase 7: protected Transformers baseline stub is implemented; full model server remains cloud-only TODO.
 - Phase 8: initial tests are implemented; broader integration tests remain TODO.
-
