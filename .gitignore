@@ -16,6 +16,7 @@ frontend/dist/
 .env
 *.local
 *.log
+backend/results/
 
 # OS / editor
 .DS_Store
